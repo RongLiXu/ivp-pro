@@ -1,14 +1,10 @@
-![logo](doc/_media/logo.png)
+
+**本项目为ivp pro修改版本，但是基本没做任何修改，只是添加了几个api以配合ivp-antd-ui使用**
+
 # 开箱即用的28181协议视频平台
 
-[![Build Status](https://travis-ci.org/xia-chu/ZLMediaKit.svg?branch=master)](https://travis-ci.org/xia-chu/ZLMediaKit)
-[![license](http://img.shields.io/badge/license-MIT-green.svg)](https://github.com/xia-chu/ZLMediaKit/blob/master/LICENSE)
-[![JAVA](https://img.shields.io/badge/language-java-red.svg)](https://en.cppreference.com/)
-[![platform](https://img.shields.io/badge/platform-linux%20|%20macos%20|%20windows-blue.svg)](https://github.com/xia-chu/ZLMediaKit)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-yellow.svg)](https://github.com/xia-chu/ZLMediaKit/pulls)
 
-
-WEB VIDEO PLATFORM是一个基于GB28181-2016标准实现的开箱即用的网络视频平台，负责实现核心信令与设备管理后台部分，支持NAT穿透，支持海康、大华、宇视等品牌的IPC、NVR接入。支持国标级联，支持将不带国标功能的摄像机/直播流/直播推流转发到其他国标平台。   
+IOT VIDEO PLATFORM是一个基于GB28181-2016标准实现的开箱即用的网络视频平台，负责实现核心信令与设备管理后台部分，支持NAT穿透，支持海康、大华、宇视等品牌的IPC、NVR接入。支持国标级联，支持将不带国标功能的摄像机/直播流/直播推流转发到其他国标平台。   
 
 流媒体服务基于@夏楚 ZLMediaKit [https://github.com/ZLMediaKit/ZLMediaKit](https://github.com/ZLMediaKit/ZLMediaKit)   
 播放器使用@dexter jessibuca [https://github.com/langhuihui/jessibuca/tree/v3](https://github.com/langhuihui/jessibuca/tree/v3)  
@@ -23,16 +19,8 @@ WEB VIDEO PLATFORM是一个基于GB28181-2016标准实现的开箱即用的网�
 
 
 # 文档
-wvp使用文档 [https://doc.wvp-pro.cn](https://doc.wvp-pro.cn)  
 ZLM使用文档 [https://github.com/ZLMediaKit/ZLMediaKit](https://github.com/ZLMediaKit/ZLMediaKit)
-> wvp文档由gitee提供服务，如果遇到打不开请多刷新几次。
 
-# 付费社群
-[![社群](doc/_media/shequ.png "shequ")](https://t.zsxq.com/0d8VAD3Dm)
-> 收费是为了提供更好的服务，也是对作者更大的激励。加入星球的用户三天后可以私信我留下微信号，我会拉大家入群。加入三天内不满意可以直接退款，大家不需要有顾虑，来白嫖三天也不是不可以。
-
-# gitee同步仓库
-https://gitee.com/pan648540858/wvp-GB28181-pro.git
 
 # 截图
 ![index](doc/_media/index.png "index.png")
@@ -114,22 +102,5 @@ https://gitee.com/pan648540858/wvp-GB28181-pro.git
 # 授权协议
 本项目自有代码使用宽松的MIT协议，在保留版权信息的情况下可以自由应用于各自商用、非商业的项目。 但是本项目也零碎的使用了一些其他的开源代码，在商用的情况下请自行替代或剔除； 由于使用本项目而产生的商业纠纷或侵权行为一概与本项目及开发者无关，请自行承担法律风险。 在使用本项目代码时，也应该在授权协议中同时表明本项目依赖的第三方库的协议
 
-# 技术支持  
-
-[知识星球](https://t.zsxq.com/0d8VAD3Dm)专栏列表：
-- [使用入门系列一：WVP-PRO能做什么](https://t.zsxq.com/0dLguVoSp)
-
-有偿技术支持，请发送邮件到648540858@qq.com
 
 # 致谢
-感谢作者[夏楚](https://github.com/xia-chu) 提供这么棒的开源流媒体服务框架,并在开发过程中给予支持与帮助。     
-感谢作者[dexter langhuihui](https://github.com/langhuihui) 开源这么好用的WEB播放器。     
-感谢作者[Kyle](https://gitee.com/kkkkk5G) 开源了好用的前端页面     
-感谢各位大佬的赞助以及对项目的指正与帮助。包括但不限于代码贡献、问题反馈、资金捐赠等各种方式的支持！以下排名不分先后：  
-[lawrencehj](https://github.com/lawrencehj) [Smallwhitepig](https://github.com/Smallwhitepig) [swwhaha](https://github.com/swwheihei) 
-[hotcoffie](https://github.com/hotcoffie) [xiaomu](https://github.com/nikmu) [TristingChen](https://github.com/TristingChen)
-[chenparty](https://github.com/chenparty) [Hotleave](https://github.com/hotleave) [ydwxb](https://github.com/ydwxb)
-[ydpd](https://github.com/ydpd) [szy833](https://github.com/szy833) [ydwxb](https://github.com/ydwxb) [Albertzhu666](https://github.com/Albertzhu666)
-[mk1990](https://github.com/mk1990) [SaltFish001](https://github.com/SaltFish001)
-
-
