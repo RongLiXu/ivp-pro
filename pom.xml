@@ -9,10 +9,10 @@
         <version>2.7.17</version>
     </parent>
 
-    <groupId>com.genersoft</groupId>
-    <artifactId>wvp-pro</artifactId>
+    <groupId>com.xunyat.iot</groupId>
+    <artifactId>ivp-pro</artifactId>
     <version>2.7.0</version>
-    <name>web video platform</name>
+    <name>iot-video-platform</name>
     <description>国标28181视频平台</description>
     <packaging>${project.packaging}</packaging>
 
