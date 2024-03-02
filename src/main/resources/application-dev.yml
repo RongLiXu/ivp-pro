@@ -30,7 +30,7 @@ spring:
         master:
           type: com.zaxxer.hikari.HikariDataSource
           driver-class-name: com.mysql.cj.jdbc.Driver
-          url: jdbc:mysql://127.0.0.1:3306/wvp2?useUnicode=true&characterEncoding=UTF8&rewriteBatchedStatements=true&serverTimezone=PRC&useSSL=false&allowMultiQueries=true
+          url: jdbc:mysql://127.0.0.1:3306/ivp2?useUnicode=true&characterEncoding=UTF8&rewriteBatchedStatements=true&serverTimezone=PRC&useSSL=false&allowMultiQueries=true
           username: root
           password: root123
           hikari:
@@ -40,7 +40,7 @@ spring:
             minimum-idle: 10                       # 连接池最小空闲连接数
             idle-timeout: 300000                  # 允许连接在连接池中空闲的最长时间（以毫秒为单位）
             max-lifetime: 1200000                 # 是池中连接关闭后的最长生命周期（以毫秒为单位)
-#[可选] WVP监听的HTTP端口, 网页和接口调用都是这个端口
+#[可选] ivp监听的HTTP端口, 网页和接口调用都是这个端口
 server:
   port: 8080
   # [可选] HTTPS配置， 默认不开启
@@ -84,7 +84,7 @@ media:
   http-port: 9092
   # [可选] 返回流地址时的ip，置空使用 media.ip
   stream-ip: 172.19.128.50
-  # [可选] wvp在国标信令中使用的ip，此ip为摄像机可以访问到的ip， 置空使用 media.ip
+  # [可选] ivp在国标信令中使用的ip，此ip为摄像机可以访问到的ip， 置空使用 media.ip
   sdp-ip: 172.19.128.50
   # [可选] zlm服务器的hook所使用的IP, 默认使用sip.ip
   hook-ip: 172.19.128.50

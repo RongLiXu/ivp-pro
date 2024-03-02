@@ -37,13 +37,13 @@ spring:
         # kingbase配置
         #        type: com.zaxxer.hikari.HikariDataSource
         #        driver-class-name: com.kingbase8.Driver
-        #        url: jdbc:kingbase8://192.168.1.55:54321/wvp?useUnicode=true&characterEncoding=utf8
+        #        url: jdbc:kingbase8://192.168.1.55:54321/ivp?useUnicode=true&characterEncoding=utf8
         #        username: system
         #        password: system
         # postgresql配置
         #    type: com.zaxxer.hikari.HikariDataSource
         #    driver-class-name: org.postgresql.Driver
-        #    url: jdbc:postgresql://192.168.1.242:3306/242wvp
+        #    url: jdbc:postgresql://192.168.1.242:3306/242ivp
         #    username: root
         #    password: SYceshizu1234
         # mysql配置
@@ -53,7 +53,7 @@ spring:
                 master:
                     type: com.zaxxer.hikari.HikariDataSource
                     driver-class-name: com.mysql.cj.jdbc.Driver
-                    url: jdbc:mysql://127.0.0.1:3306/wvp2?useUnicode=true&characterEncoding=UTF8&rewriteBatchedStatements=true&serverTimezone=PRC&useSSL=false&allowMultiQueries=true
+                    url: jdbc:mysql://127.0.0.1:3306/ivp2?useUnicode=true&characterEncoding=UTF8&rewriteBatchedStatements=true&serverTimezone=PRC&useSSL=false&allowMultiQueries=true
                     username: root
                     password: root123
                     hikari:
@@ -66,7 +66,7 @@ spring:
                 share:
                     type: com.zaxxer.hikari.HikariDataSource
                     driver-class-name: com.mysql.cj.jdbc.Driver
-                    url: jdbc:mysql://127.0.0.1:3306/wvp269_1?useUnicode=true&characterEncoding=UTF8&rewriteBatchedStatements=true&serverTimezone=PRC&useSSL=false&allowMultiQueries=true&allowPublicKeyRetrieval=true
+                    url: jdbc:mysql://127.0.0.1:3306/ivp269_1?useUnicode=true&characterEncoding=UTF8&rewriteBatchedStatements=true&serverTimezone=PRC&useSSL=false&allowMultiQueries=true&allowPublicKeyRetrieval=true
                     username: root
                     password: 12345678
 
@@ -76,7 +76,7 @@ spring:
 #pagehelper:
 #    helper-dialect: postgresql
 
-# [可选] WVP监听的HTTP端口, 网页和接口调用都是这个端口
+# [可选] ivp监听的HTTP端口, 网页和接口调用都是这个端口
 server:
     port: 18080
     # [可选] HTTPS配置， 默认不开启
@@ -141,7 +141,7 @@ media:
     ip: 192.168.0.100
     # [可选] 返回流地址时的ip，置空使用 media.ip
     stream-ip:
-    # [可选] wvp在国标信令中使用的ip，此ip为摄像机可以访问到的ip， 置空使用 media.ip
+    # [可选] ivp在国标信令中使用的ip，此ip为摄像机可以访问到的ip， 置空使用 media.ip
     sdp-ip:
     # [可选] zlm服务器的hook所使用的IP, 默认使用sip.ip
     hook-ip:
@@ -209,7 +209,7 @@ user-settings:
     logInDatabase: true
     # 使用推流状态作为推流通道状态
     use-pushing-as-status: true
-    # 使用来源请求ip作为streamIp,当且仅当你只有zlm节点它与wvp在一起的情况下开启
+    # 使用来源请求ip作为streamIp,当且仅当你只有zlm节点它与ivp在一起的情况下开启
     use-source-ip-as-stream-ip: false
     # 国标点播 按需拉流, true：有人观看拉流，无人观看释放， false：拉起后不自动释放
     stream-on-demand: true

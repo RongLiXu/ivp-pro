@@ -33,29 +33,31 @@ WORKDIR /home
 
 RUN      git clone https://gitee.com/pan648540858/maven.git && \
          cp maven/settings.xml /usr/share/maven/conf/ && \
-         git clone https://gitee.com/pan648540858/wvp-GB28181.git && \
-         git clone https://gitee.com/pan648540858/wvp-pro-assist.git
-         # 编译前端界面
-WORKDIR /home/wvp-GB28181/web_src
+         git clone https://codeup.aliyun.com/65137e30ecfe5e6200b6d9fa/IotP/Iot-Vedio-Platform/ivp-pro.git && \
+         git clone https://codeup.aliyun.com/65137e30ecfe5e6200b6d9fa/IotP/Iot-Vedio-Platform/ivp-pro-assist.git &&\
+         git clone https://codeup.aliyun.com/65137e30ecfe5e6200b6d9fa/IotP/Iot-Vedio-Platform/ivp-pro-web.git
+
+# 编译前端界面
+WORKDIR /home/ivp-pro-web
 
 RUN      npm install && \
          npm run build && \
-         mkdir -p /opt/wvp/config && \
+         mkdir -p /opt/ivp/config && \
          mkdir -p /opt/assist/config && \
-         cp /home/wvp-GB28181/src/main/resources/application-dev.yml /opt/wvp/config/application.yml && \
-         cp /home/wvp-pro-assist/src/main/resources/application-dev.yml /opt/assist/config/application.yml
+         cp /home/ivp-pro/src/main/resources/application-dev.yml /opt/ivp/config/application.yml && \
+         cp /home/ivp-pro-assist/src/main/resources/application-dev.yml /opt/assist/config/application.yml
 
-         # wvp打包
-WORKDIR /home/wvp-GB28181
+# ivp打包
+WORKDIR /home/ivp-pro
 RUN      mvn compile && \
          mvn package && \
-         cp /home/wvp-GB28181/target/wvp*.jar /opt/wvp/
+         cp /home/ivp-pro/target/ivp*.jar /opt/ivp/
 
-         # wvp 录像管理打包
-WORKDIR /home/wvp-pro-assist
+# ivp 录像管理打包
+WORKDIR /home/ivp-pro-assist
 RUN      mvn compile && \
          mvn package && \
-         cp /home/wvp-pro-assist/target/*.jar /opt/assist/
+         cp /home/ivp-pro-assist/target/*.jar /opt/assist/
 
          # zlm打包
 WORKDIR /home
@@ -73,24 +75,24 @@ RUN     mkdir -p /opt/media && \
 
          # 清理
  RUN     rm -rf /home/wiki && \
-         rm -rf /home/wvp-GB28181 && \
+         rm -rf /home/ivp-pro && \
          apt-get autoremove -y git maven nodejs npm && \
          apt-get clean -y && \
          rm -rf /var/lib/apt/lists/*dic
 
-WORKDIR /opt/wvp
+WORKDIR /opt/ivp
 RUN     echo '#!/bin/bash' > run.sh && \
-        echo 'echo ${WVP_IP}' >> run.sh && \
-        echo 'echo ${WVP_CONFIG}' >> run.sh && \
-        echo 'redis-server --daemonize yes --bind 0.0.0.0' >> run.sh && \
+        echo 'echo ${IVP_IP}' >> run.sh && \
+        echo 'echo ${IVP_CONFIG}' >> run.sh && \
+#        echo 'redis-server --daemonize yes --bind 0.0.0.0' >> run.sh && \
         echo 'cd /opt/assist' >> run.sh && \
         echo 'nohup java -jar *.jar --userSettings.record=/opt/media/www/record/ &' >> run.sh && \
         echo 'nohup /opt/media/MediaServer -d -m 3 &' >> run.sh && \
-        echo 'cd /opt/wvp' >> run.sh && \
-        echo 'if [-n "${WVP_CONFIG}"]; then' >> run.sh && \
-        echo '        java -jar *.jar --spring.config.location=/opt/wvp/config/application.yml --media.record-assist-port=18081 ${WVP_CONFIG}' >> run.sh && \
+        echo 'cd /opt/ivp' >> run.sh && \
+        echo 'if [-n "${IVP_CONFIG}"]; then' >> run.sh && \
+        echo '        java -jar *.jar --spring.config.location=/opt/ivp/config/application.yml --media.record-assist-port=18081 ${IVP_CONFIG}' >> run.sh && \
         echo 'else' >> run.sh && \
-        echo '        java -jar *.jar --spring.config.location=/opt/wvp/config/application.yml --media.record-assist-port=18081 --media.ip=127.0.0.1 --media.sdp-ip=${WVP_IP} --sip.ip=${WVP_IP} --media.stream-ip=${WVP_IP}' >> run.sh  && \
+        echo '        java -jar *.jar --spring.config.location=/opt/ivp/config/application.yml --media.record-assist-port=18081 --media.ip=127.0.0.1 --media.sdp-ip=${IVP_IP} --sip.ip=${IVP_IP} --media.stream-ip=${IVP_IP}' >> run.sh  && \
         echo 'fi' >> run.sh
 RUN chmod +x run.sh
 
@@ -125,6 +127,6 @@ RUN apt-get update && \
         apt-get clean -y && \
         rm -rf /var/lib/apt/lists/*dic
 
-WORKDIR /opt/wvp
+WORKDIR /opt/ivp
 COPY --from=build /opt /opt
 CMD ["sh", "run.sh"]

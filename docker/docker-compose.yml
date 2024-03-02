@@ -9,9 +9,9 @@ services:
     environment:
       TZ: "Asia/Shanghai"
     command: redis-server /etc/redis/redis_default.conf --appendonly yes
-  wvp:
+  ivp:
     build:
-      context: ./wvp
+      context: ivp
       args:
         gitUrl: "https://gitee.com/pan648540858"
         zlmGitUrl: "https://gitee.com/xia-chu/ZLMediaKit"

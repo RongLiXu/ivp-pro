@@ -3,7 +3,7 @@
 > 开箱即用的28181协议视频平台
 
 # 概述
-- WVP-PRO基于GB/T 28181-2016标准实现的流媒体平台，依托优秀的开源流媒体服务[ZLMediaKit](https://github.com/ZLMediaKit/ZLMediaKit)，提供完善丰富的功能。
+- IVP-PRO基于GB/T 28181-2016标准实现的流媒体平台，依托优秀的开源流媒体服务[ZLMediaKit](https://github.com/ZLMediaKit/ZLMediaKit)，提供完善丰富的功能。
 - GB/T 28181-2016 中文标准名称是《公共安全视频监控联网系统信息传输、交换、控制技术要求》是监控领域的国家标准。大量应用于政府视频平台。
 - 通过28181协议你可以将IPC摄像头接入平台，可以观看也可以使用28181/rtsp/rtmp/flv等协议将视频流分发到其他平台。
 
@@ -13,10 +13,6 @@
 - 前端完善，自带完整前端页面，无需二次开发可直接部署使用。
 - 完全开源，且使用MIT许可协议。保留版权的情况下可以用于商业项目。
 - 支持多流媒体节点负载均衡。
-
-# 付费社群
-[![社群](_media/shequ.png "shequ")](https://t.zsxq.com/0d8VAD3Dm)
-> 收费是为了提供更好的服务，也是对作者更大的激励。加入星球的用户三天后可以私信我留下微信号，我会拉大家入群。加入三天内不满意可以直接退款，大家不需要有顾虑，来白嫖三天也不是不可以。
 
 # 我们实现了哪些国标功能
 **作为上级平台**
@@ -98,9 +94,3 @@
 - [ ] 语音对讲
 
    
-
-
-# 社区
-代码目前托管在GitHub和Gitee，Gitee目前作为加速仓库使用，不接受issue。  
-GitHub： [https://github.com/648540858/wvp-GB28181-pro](https://github.com/648540858/wvp-GB28181-pro)  
-Gitee： [https://gitee.com/pan648540858/wvp-GB28181-pro](https://gitee.com/pan648540858/wvp-GB28181-pro)
