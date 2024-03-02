@@ -33,9 +33,9 @@ WORKDIR /home
 
 RUN      git clone https://gitee.com/pan648540858/maven.git && \
          cp maven/settings.xml /usr/share/maven/conf/ && \
-         git clone https://codeup.aliyun.com/65137e30ecfe5e6200b6d9fa/IotP/Iot-Vedio-Platform/ivp-pro.git && \
-         git clone https://codeup.aliyun.com/65137e30ecfe5e6200b6d9fa/IotP/Iot-Vedio-Platform/ivp-pro-assist.git &&\
-         git clone https://codeup.aliyun.com/65137e30ecfe5e6200b6d9fa/IotP/Iot-Vedio-Platform/ivp-pro-web.git
+         git clone https://github.com/RongLiXu/ivp-pro.git && \
+         git clone https://github.com/RongLiXu/ivp-pro-assist.git &&\
+         git clone https://github.com/RongLiXu/ivp-pro-web.git
 
 # 编译前端界面
 WORKDIR /home/ivp-pro-web
