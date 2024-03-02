@@ -84,7 +84,7 @@ ZLM使用文档 [https://github.com/ZLMediaKit/ZLMediaKit](https://github.com/ZL
 - [X] 多流媒体节点，自动选择负载最低的节点使用。
 - [X] 支持启用udp多端口模式, 提高udp模式下媒体传输性能;
 - [X] 支持公网部署； 
-- [X] 支持wvp与zlm分开部署，提升平台并发能力
+- [X] 支持ivp与zlm分开部署，提升平台并发能力
 - [X] 支持拉流RTSP/RTMP，分发为各种流格式，或者推送到其他国标平台
 - [X] 支持推流RTSP/RTMP，分发为各种流格式，或者推送到其他国标平台
 - [X] 支持推流鉴权
