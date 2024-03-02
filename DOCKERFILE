@@ -59,7 +59,7 @@ RUN      mvn compile && \
          mvn package && \
          cp /home/ivp-pro-assist/target/*.jar /opt/assist/
 
-         # zlm打包
+# zlm打包
 WORKDIR /home
 RUN     mkdir -p /opt/media && \
         git clone --depth=1 https://gitee.com/xia-chu/ZLMediaKit && \
@@ -73,7 +73,7 @@ RUN     mkdir -p /opt/media && \
         mkdir -p /opt/media/www/record
 
 
-         # 清理
+# 清理
  RUN     rm -rf /home/wiki && \
          rm -rf /home/ivp-pro && \
          apt-get autoremove -y git maven nodejs npm && \
