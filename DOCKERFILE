@@ -40,8 +40,9 @@ RUN      git clone https://gitee.com/pan648540858/maven.git && \
 # 编译前端界面
 WORKDIR /home/ivp-pro-web
 
-RUN      npm install && \
+RUN      npm --registry=http://registry.npm.taobao.org install && \
          npm run build && \
+         rm -rf node_modules && \
          mkdir -p /opt/ivp/config && \
          mkdir -p /opt/assist/config && \
          cp /home/ivp-pro/src/main/resources/application-dev.yml /opt/ivp/config/application.yml && \
