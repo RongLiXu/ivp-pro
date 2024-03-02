@@ -33,13 +33,13 @@ spring:
         # postgresql配置
 #        type: com.zaxxer.hikari.HikariDataSource
 #        driver-class-name: org.postgresql.Driver
-#        url: jdbc:postgresql://192.168.1.242:3306/242wvp
+#        url: jdbc:postgresql://192.168.1.242:3306/ivp
 #        username: root
 #        password: SYceshizu1234
         # mysql配置
         type: com.zaxxer.hikari.HikariDataSource
         driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://192.168.1.242:3306/242wvp?useUnicode=true&characterEncoding=UTF8&rewriteBatchedStatements=true&serverTimezone=PRC&useSSL=false&allowMultiQueries=true&allowPublicKeyRetrieval=true
+        url: jdbc:mysql://192.168.1.242:3306/ivp?useUnicode=true&characterEncoding=UTF8&rewriteBatchedStatements=true&serverTimezone=PRC&useSSL=false&allowMultiQueries=true&allowPublicKeyRetrieval=true
         username: root
         password: SYceshizu1234
 

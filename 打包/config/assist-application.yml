@@ -49,7 +49,7 @@ swagger-ui:
 # [可选] 日志配置, 一般不需要改
 logging:
     file:
-        name: logs/wvp.log
+        name: logs/ivp.log
         max-history: 30
         max-size: 10MB
         total-size-cap: 300MB

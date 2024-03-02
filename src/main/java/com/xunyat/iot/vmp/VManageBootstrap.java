@@ -21,7 +21,7 @@ import java.util.Collections;
 /**
  * 启动类
  */
-@ServletComponentScan("com.genersoft.iot.vmp.conf")
+@ServletComponentScan("com.xunyat.iot.vmp.conf")
 @SpringBootApplication
 @EnableScheduling
 public class VManageBootstrap extends SpringBootServletInitializer {
