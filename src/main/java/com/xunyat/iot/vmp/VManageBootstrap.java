@@ -42,6 +42,8 @@ public class VManageBootstrap extends SpringBootServletInitializer {
 	public static void restart() {
 		context.close();
 		VManageBootstrap.context = SpringApplication.run(VManageBootstrap.class, args);
+
+
 	}
 
 	@Override

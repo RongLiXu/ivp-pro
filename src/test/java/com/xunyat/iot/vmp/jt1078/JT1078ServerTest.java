@@ -100,4 +100,5 @@ public class JT1078ServerTest {
         String s = jt1078Template.queryBackTime("18864197066", j9205, 6);
         System.out.println(s);
     }
+
 }

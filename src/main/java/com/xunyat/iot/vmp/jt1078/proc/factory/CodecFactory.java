@@ -23,7 +23,7 @@ public class CodecFactory {
 
     public static void init() {
         protocolHash = new HashMap<>();
-        List<Class<?>> classList = ClassUtil.getClassList("com.genersoft.iot.vmp.jt1078.proc", MsgId.class);
+        List<Class<?>> classList = ClassUtil.getClassList("com.xunyat.iot.vmp.jt1078.proc", MsgId.class);
         for (Class<?> handlerClass : classList) {
             String id = handlerClass.getAnnotation(MsgId.class).id();
             protocolHash.put(id, handlerClass);
