@@ -27,8 +27,13 @@ export default {
 body{
   font-family: sans-serif;
 }
+#app .el-header{
+  padding: 0;
+}
 /*定义标题栏*/
 .page-header {
+  margin-left: -20px;
+  width: calc(100vw - 15px);
   background-color: #FFFFFF;
   margin-bottom: 1rem;
   padding: 0.5rem;

@@ -1,9 +1,19 @@
 <template>
-  <div class="login" id="login">
+  <div class="login-page">
+    <div class="login-content">
+      <div class="login-head" style="margin-top:15px;">
+        <span>瓯海奥体监控平台</span>
+      </div>
+      <el-input v-model="username" placeholder="请输入内容" style="width:80%;margin: 30px 10% 0px 10%;"></el-input>
+      <el-input placeholder="请输入密码" v-model="password" show-password style="width:80%;margin: 15px 10%;"></el-input>
+      <el-button type="primary" style="width:80%;margin: 15px 10%;" @click="login">登 录</el-button>
+    </div>
+  </div>
+  <!-- <div class="login" id="login">
     <div class="limiter">
       <div class="container-login100">
         <div class="wrap-login100">
-          <span class="login100-form-title p-b-26">IVP视频平台</span>
+          <span class="login100-form-title p-b-26">瓯海奥体监控平台</span>
           <span class="login100-form-title p-b-48">
             <i class="fa fa-video-camera"></i>
           </span>
@@ -49,7 +59,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </template>
 
 <script>
@@ -139,3 +149,62 @@ export default {
   },
 };
 </script>
+<style scoped>
+.login-page {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #0160ba url('~@static/images/login_bg.jpg') no-repeat 50%;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.login-content {
+  z-index: 100;
+  padding: 30px 0;
+  width: 460px;
+  background: hsla(0, 0%, 100%, .9);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px #333;
+  box-shadow: 0 0 5px #333;
+  color: rgba(0, 0, 0, .8);
+}
+.login-head{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.login-head span{
+  font-size: 33px;
+  font-family: Avenir, Helvetica Neue, Arial, Helvetica, sans-serif;
+}
+
+.el-input >>> input:-webkit-autofill , :-webkit-autofill, :-webkit-autofill {
+  -webkit-text-fill-color: #606266 !important;
+  -webkit-box-shadow: 0 0 0px 1000px transparent  inset !important;
+  background-color:transparent;
+  background-image: none;
+  transition: background-color 50000s ease-in-out 0s;
+}  
+.el-input >>> .input {
+  background-color:transparent;
+}
+</style>
