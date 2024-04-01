@@ -38,6 +38,9 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         if (requestURI.equalsIgnoreCase("/api/user/login")) {
             chain.doFilter(request, response);
             return;
+        }else if (requestURI.contains("/api/passengerFlow")) {
+            chain.doFilter(request, response);
+            return;
         }
         if (!userSetting.isInterfaceAuthentication()) {
             UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(null, null, new ArrayList<>() );
